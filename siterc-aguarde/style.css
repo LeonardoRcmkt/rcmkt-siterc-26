@@ -2,13 +2,13 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("fonts/Montserrat-VariableFont_wght.ttf");
   font-weight: 100 200 300 400 500 600 700 900;
 }
 
 @font-face {
   font-family: "Integral CF";
-  src: url("/fonts/Integral\ CF\ Regular.ttf");
+  src: url("fonts/Integral\ CF\ Regular.ttf");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Integral CF";
-  src: url("/fonts/Integral\ CF\ Bold.ttf");
+  src: url("fonts/Integral\ CF\ Bold.ttf");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -48,7 +48,7 @@ body {
   text-align: center;
   color: var(--color-primary);
   font-family: "Integral CF", sans-serif;
-  background-image: url(/imgs/bg.webp);
+  background-image: url(imgs/bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -168,6 +168,7 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 2rem;
   /* background-color: green; */
 }
 
@@ -214,7 +215,8 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+box-sizing: border-box;
+width: 100%;
   /* background-color: yellow; */
 }
 #content-desk {
@@ -228,13 +230,14 @@ h1 {
   /* max-height: 25rem; */
   object-fit: contain;
   aspect-ratio: 1;
+  padding: 1em;
 }
-#selo {
+.selo {
   display: none;
 }
 
 #content {
-  background-image: url(/imgs/content);
+  background-image: url(imgs/content);
 }
 
 .brush {
@@ -269,6 +272,18 @@ h1 {
   gap: 1rem;
 }
 
+.card {
+  /* width: 300px; */
+  /* overflow: visible !important; */
+  perspective: 1000px;
+}
+
+.card img {
+  /* width: 100%; */
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
 @media screen and (min-width: 768px) {
 
   h1 {
@@ -282,7 +297,7 @@ h1 {
     align-items: center;
   }
   body {
-    background-image: url(/imgs/bg-desk.webp);
+    background-image: url(imgs/bg-desk.webp);
   }
   .content {
     gap: 2rem;
@@ -291,7 +306,7 @@ h1 {
     flex-direction: row;
     gap: 2rem;
   }
-  #selo {
+  .selo {
     display: flex;
   }
   .text-contact {
